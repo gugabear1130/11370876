@@ -15,13 +15,26 @@
                 <h1>GADAMN WORLD</h1>
                 <img src="css/images/icon.png" alt="Logo" />
             </div>
-            <ul>
+            <div class="menu-toggle">☰</div>
+            <ul class="hidden">
                 <li><a href="index.html">首頁</a></li>
                 <li class="active"><a href="my_art.html">作品</a></li>
                 <li><a href="my_interest.html">興趣</a></li>
                 <li><a href="contact_me.html">聯絡我</a></li>
             </ul>
-        </nav>
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const menuToggle = document.querySelector(".menu-toggle"); 
+                    const navMenu = document.querySelector(".sticky-header nav ul"); 
+            
+                    menuToggle.addEventListener("click", function() {
+                        navMenu.classList.toggle("hidden");
+                    });
+                });
+            </script>
+            
+        
     </header>
     <!--圖片區-->
     <div class="art">
@@ -99,6 +112,9 @@
         </a> 
 
     </div>
+    <footer>
+        <p>Copyright © GADAMN WORLD. All rights reserved.</p>
+    </footer>
     
 </body>
 </html>

@@ -7,7 +7,7 @@
     position: static ;
     top: 20% ;
     left: 20%;
-    margin: 200px auto ; 
+    margin: 100px auto ; 
     padding: 40px;
     border-radius: 20px;
 }
@@ -49,4 +49,16 @@ p{
 }
 .content ul li a :hover{
     color: rgba(84, 200, 161, 0.964);
+}
+
+footer {
+    background-color: #050d0ce3; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    margin-top:30%;
+
+    
 }

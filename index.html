@@ -6,38 +6,61 @@
     <title>GADAMN WORLD</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="icon/favicon/favicon.ico" type="image/x-icon">
+    
 </head>
 <body> 
-    
     <header class="sticky-header">
         <nav>
-             <div class="logo">
+            <div class="logo">
                 <h1>GADAMN WORLD</h1>
                 <img src="css/images/icon.png" alt="Logo" />
             </div>
-            <ul>
+
+            <div class="menu-toggle">☰</div> 
+            <ul class="hidden">
                 <li class="active"><a href="index.html">首頁</a></li>
                 <li><a href="my_art.html">作品</a></li>
                 <li><a href="my_interest.html">興趣</a></li>
                 <li><a href="contact_me.html">聯絡我</a></li>
             </ul>
         </nav>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const menuToggle = document.querySelector(".menu-toggle"); 
+                const navMenu = document.querySelector(".sticky-header nav ul"); 
+  
+                menuToggle.addEventListener("click", function() {
+                    navMenu.classList.toggle("hidden"); 
+                });
+            });
+        </script>
     </header>
+
     <h2>WELCOME! </h2>
+
+    <footer>
+        <p>Copyright © GADAMN WORLD. All rights reserved.</p>
+    </footer>
+
     <style>
         h2{
-           color: #ffffff;
-           text-size-adjust: 600px; 
-           text-align: center;
-           line-height: 600px;
-        }
-    </style>
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20%;
 
-
-
+}
+footer {
+    background-color: #050d0ce3; 
     
-    <footer>
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding:10px;
+    font-size: 14px;
+    margin-top:290px;
+}
 
-    </footer>
-</body>
+    </style>
 </html>

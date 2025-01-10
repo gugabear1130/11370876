@@ -1,36 +1,37 @@
-
-body{
+body {
     margin: 0;
     padding: 0;
     background-image: url("images/background.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center center;  
+    
 }
-h1{
 
+h1 {
     margin: 0;
     color: #ffffff;
-   
 }
+
+
 .sticky-header {
     background-color: #050d0ce3;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    
 }
 
 .sticky-header nav {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    padding: auto 20px;
+    padding: 0 20px;
 }
 
 .sticky-header .logo img {
-    width: 60px; 
+    width: 60px;
     height: auto;
 }
 
@@ -39,6 +40,7 @@ h1{
     padding: 0;
     list-style-type: none;
     display: flex;
+    margin-left: auto; 
 }
 
 .sticky-header nav ul li {
@@ -51,21 +53,67 @@ h1{
     font-size: 18px;
     padding: 30px 30px;
     display: block;
+    border-radius: 2px;
 }
 
 .sticky-header nav ul li a:hover {
     color: #4cb879;
 }
 
-.sticky-header ul li.active a{
+.sticky-header ul li.active a {
     color: black;
     background-color: rgba(240, 248, 255, 0.791);
     padding: 30px;
 }
-.logo{
-    padding-left: 2%;
+
+.logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: auto 20px;
+}
+
+
+.sticky-header .menu-toggle {
+    display: none; 
+    background-color: #ffffff07;;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+
+@media (max-width: 768px) {
+    .sticky-header .menu-toggle {
+        display: block; 
+    }
+
+    
+    .sticky-header nav ul.hidden {
+        display: none; 
+    }
+
+    
+    .sticky-header nav ul {
+        flex-direction: column;
+        align-items: flex-end; 
+        width: 100%;
+        position: absolute; 
+        top: 60px; 
+        left: 0;
+       
+    }
+
+    .sticky-header nav ul li {
+        margin: 0; 
+    }
+}
+
+footer p {
+    margin: 0;
+    padding:0 ;
+    text-align: center ;
+    list-style: none;
 }
